@@ -1,8 +1,8 @@
-import 'package:SpaceX/Rockets.dart';
-import 'package:SpaceX/Upcoming.dart';
+import 'package:SpaceX/Screens/Rockets.dart';
+import 'package:SpaceX/Screens/Upcoming.dart';
 import 'package:flutter/material.dart';
 import 'Spaceship.dart';
-import 'Launches.dart';
+import 'Screens/Launches.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,12 +31,81 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var spaceShips = [
-    new Spaceship("Starlink 2", "CCAES SLC 40", new DateTime.now(),false,'assets/crs.png',false,"Last launch of the original Falcon 9 v1.0 launch vehicle","Falcon 9","v1.0","Cores: 4","Payloads: 150kg",[]),
-    new Spaceship("Starlink 2", "CCAES SLC 40", new DateTime.now(),false,'assets/crs.png',false,"Last launch of the original Falcon 9 v1.0 launch vehicle","Falcon 9","v1.0","Cores: 4","Payloads: 150kg",[]),
-    new Spaceship("Starlink 2", "CCAES SLC 40", new DateTime.now(),false,'assets/crs.png',false,"Last launch of the original Falcon 9 v1.0 launch vehicle","Falcon 9","v1.0","Cores: 4","Payloads: 150kg",[]),
-    new Spaceship("Starlink 2", "CCAES SLC 40", new DateTime.now(),false,'assets/crs.png',false,"Last launch of the original Falcon 9 v1.0 launch vehicle","Falcon 9","v1.0","Cores: 4","Payloads: 150kg",[]),
-    new Spaceship("Starlink 2", "CCAES SLC 40", new DateTime.now(),false,'assets/crs.png',false,"Last launch of the original Falcon 9 v1.0 launch vehicle","Falcon 9","v1.0","Cores: 4","Payloads: 150kg",[]),
-    new Spaceship("Starlink 2", "CCAES SLC 40", new DateTime.now(),false,'assets/crs.png',false,"Last launch of the original Falcon 9 v1.0 launch vehicle","Falcon 9","v1.0","Cores: 4","Payloads: 150kg",[]),
+    new Spaceship(
+        "Starlink 2",
+        "CCAES SLC 40",
+        new DateTime.now(),
+        false,
+        'assets/crs.png',
+        false,
+        "Last launch of the original Falcon 9 v1.0 launch vehicle",
+        "Falcon 9",
+        "v1.0",
+        "Cores: 4",
+        "Payloads: 150kg",
+        ["assets/rocket.jpeg", "assets/rocket.jpeg", "assets/rocket.jpeg"]),
+    new Spaceship(
+        "Starlink 2",
+        "CCAES SLC 40",
+        new DateTime.now(),
+        false,
+        'assets/crs.png',
+        false,
+        "Last launch of the original Falcon 9 v1.0 launch vehicle",
+        "Falcon 9",
+        "v1.0",
+        "Cores: 4",
+        "Payloads: 150kg",
+        ["assets/rocket.jpeg"]),
+    new Spaceship(
+        "Starlink 2",
+        "CCAES SLC 40",
+        new DateTime.now(),
+        false,
+        'assets/crs.png',
+        false,
+        "Last launch of the original Falcon 9 v1.0 launch vehicle",
+        "Falcon 9",
+        "v1.0",
+        "Cores: 4",
+        "Payloads: 150kg", []),
+    new Spaceship(
+        "Starlink 2",
+        "CCAES SLC 40",
+        new DateTime.now(),
+        false,
+        'assets/crs.png',
+        false,
+        "Last launch of the original Falcon 9 v1.0 launch vehicle",
+        "Falcon 9",
+        "v1.0",
+        "Cores: 4",
+        "Payloads: 150kg",
+        ["assets/rocket.jpeg", "assets/rocket.jpeg"]),
+    new Spaceship(
+        "Starlink 2",
+        "CCAES SLC 40",
+        new DateTime.now(),
+        false,
+        'assets/crs.png',
+        false,
+        "Last launch of the original Falcon 9 v1.0 launch vehicle",
+        "Falcon 9",
+        "v1.0",
+        "Cores: 4",
+        "Payloads: 150kg", []),
+    new Spaceship(
+        "Starlink 2",
+        "CCAES SLC 40",
+        new DateTime.now(),
+        false,
+        'assets/crs.png',
+        false,
+        "Last launch of the original Falcon 9 v1.0 launch vehicle",
+        "Falcon 9",
+        "v1.0",
+        "Cores: 4",
+        "Payloads: 150kg", []),
   ];
   final tabs = [
     Tab(child: Text("Upcoming", style: TextStyle(color: Colors.grey))),
@@ -50,7 +119,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0,
@@ -86,11 +154,9 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               children: [
                 TabBar(
-                  
-                  indicatorPadding: EdgeInsets.only(bottom:7),
+                  indicatorPadding: EdgeInsets.only(bottom: 7),
                   indicatorWeight: 4,
                   indicatorSize: TabBarIndicatorSize.label,
-                  unselectedLabelColor: Colors.red,
                   indicatorColor: Colors.red,
                   tabs: this.tabs,
                 ),

@@ -1,4 +1,5 @@
-import 'package:SpaceX/MainInfoCard.dart';
+import 'package:SpaceX/RocketsCard/CardContent.dart';
+import 'package:SpaceX/RocketsCard/CardWrapper.dart';
 import 'package:flutter/material.dart';
 
 import 'MoreInfo.dart';
@@ -23,10 +24,8 @@ class Launches extends StatelessWidget {
             );
           },
           child: Container(
-              margin: EdgeInsets.only(top: 10),
-              padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-              
-              child: MainInfoCard(
+              margin: EdgeInsets.only(top: 10),              
+              child: RocketCard(
                 this.launches[index]
               )
           )

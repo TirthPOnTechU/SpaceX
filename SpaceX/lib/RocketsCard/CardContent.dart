@@ -1,9 +1,10 @@
+import 'package:SpaceX/InfoBlock/InfoBlockTitle.dart';
 import 'package:SpaceX/Spaceship.dart';
 import 'package:flutter/material.dart';
 
-class MainInfoCard extends StatelessWidget {
+class CardContent extends StatelessWidget {
   final Spaceship spaceship;
-  MainInfoCard(this.spaceship);
+  CardContent(this.spaceship);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,19 +24,12 @@ class MainInfoCard extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-              decoration: BoxDecoration(),
+              padding: EdgeInsets.fromLTRB(0,10, 0, 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "LAUNCH",
-                    style: TextStyle(
-                        fontSize: 10,
-                        color: Colors.red,
-                        fontWeight: FontWeight.bold),
-                  ),
+                  InfoBlockTitle("LAUNCH"),
                   Text(
                     this.spaceship.name,
                     style: TextStyle(

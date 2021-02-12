@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class InfoBlockBody extends StatelessWidget {
-  final body;
-  InfoBlockBody(this.body);
+  final String body;
+  final Color bodyColor;
+  InfoBlockBody(this.body,this.bodyColor);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +16,7 @@ class InfoBlockBody extends StatelessWidget {
           child: Text(
             this.body,
             style: TextStyle(
-                fontSize: 17, color: Colors.blue),
+                fontSize: 17, color: this.bodyColor),
           ),
         ),
       );
