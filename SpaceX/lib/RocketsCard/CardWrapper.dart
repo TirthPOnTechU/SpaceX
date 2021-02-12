@@ -1,11 +1,13 @@
 import 'package:SpaceX/RocketsCard/CardContent.dart';
 import 'package:SpaceX/Screens/MoreInfo.dart';
-import 'package:SpaceX/Spaceship.dart';
+import 'package:SpaceX/Models/Spaceship.dart';
 import 'package:flutter/material.dart';
 
 class RocketCard extends StatelessWidget {
   final Spaceship spaceship;
-  RocketCard(this.spaceship);
+  final bool isResultTab;
+  RocketCard(this.spaceship,this.isResultTab);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -20,6 +22,6 @@ class RocketCard extends StatelessWidget {
           child: Container(
               margin: EdgeInsets.only(top: 10),
               padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-              child: CardContent(this.spaceship)));
+              child: CardContent(this.spaceship,this.isResultTab)));
   }
 }

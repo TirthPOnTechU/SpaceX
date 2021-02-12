@@ -2,6 +2,7 @@ import 'package:SpaceX/InfoBlock/InfoBlockBody.dart';
 import 'package:SpaceX/InfoBlock/InfoBlockTitle.dart';
 import 'package:flutter/material.dart';
 
+//Component for information with title and text content
 class InfoBlock extends StatelessWidget {
   final String title;
   final String body;
@@ -9,11 +10,6 @@ class InfoBlock extends StatelessWidget {
   InfoBlock(this.title,this.body,this.bodyColor);
   @override
   Widget build(BuildContext context) {
-    if(this.bodyColor.toLowerCase()=="light"){
-      print("white");
-    }else{
-      print("black");
-    }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

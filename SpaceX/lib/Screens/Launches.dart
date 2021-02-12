@@ -26,7 +26,8 @@ class Launches extends StatelessWidget {
           child: Container(
               margin: EdgeInsets.only(top: 10),              
               child: RocketCard(
-                this.launches[index]
+                this.launches[index],
+                false
               )
           )
         );

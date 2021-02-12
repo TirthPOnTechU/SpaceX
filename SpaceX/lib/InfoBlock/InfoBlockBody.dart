@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+// Body component for information component (Color theme chosen by user)
 class InfoBlockBody extends StatelessWidget {
   final String body;
   final Color bodyColor;

@@ -1,6 +1,6 @@
 import 'package:SpaceX/InfoBlock/InfoBlock.dart';
 import 'package:SpaceX/InfoBlock/InfoBlockTitle.dart';
-import 'package:SpaceX/Spaceship.dart';
+import 'package:SpaceX/Models/Spaceship.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -34,45 +34,45 @@ class MoreInfo extends StatelessWidget {
                 child: Image(image: AssetImage(this.spaceship.logoFile)),
               ),
             ),
-            InfoBlock("ROCKET", this.spaceship.name, "light"),
-            InfoBlock(
+            MoreInfoBlockWArapper("ROCKET", this.spaceship.name),
+            MoreInfoBlockWArapper(
                 "LAUNCH DATE",
                 DateFormat('dd-MM-yyy').format(this.spaceship.launchDate),
-                "light"),
-            InfoBlock("LAUNCH SITE", this.spaceship.launchSite, "light"),
-            InfoBlock(
+                ),
+            MoreInfoBlockWArapper("LAUNCH SITE", this.spaceship.launchSite),
+            MoreInfoBlockWArapper(
                 "LAUNCH STATUS",
                 this.spaceship.isLaunchSuccess == true ? "Success" : "Failure",
-                "light"),
-            InfoBlock(
+                ),
+            MoreInfoBlockWArapper(
                 "DETAILS",
                 this.spaceship.details != null ? this.spaceship.details : "",
-                "light"),
-            InfoBlock(
+                ),
+            MoreInfoBlockWArapper(
                 "ROCKET SUMMARY",
                 this.spaceship.rocketSummary != null
                     ? this.spaceship.rocketSummary
                     : "",
-                "light"),
-            InfoBlock(
+                ),
+            MoreInfoBlockWArapper(
                 "TYPE",
                 this.spaceship.type != null ? this.spaceship.type : "",
-                "light"),
+                ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                InfoBlock(
+                MoreInfoBlockWArapper(
                     "FIRST STAGE",
                     this.spaceship.firstStage != null
                         ? this.spaceship.firstStage
                         : "",
-                    "light"),
-                InfoBlock(
+                    ),
+                MoreInfoBlockWArapper(
                     "SECOND STAGE",
                     this.spaceship.secondState != null
                         ? this.spaceship.secondState
                         : "",
-                    "light"),
+                    ),
               ],
             ),
             Row(
@@ -109,14 +109,14 @@ class MoreInfo extends StatelessWidget {
             this.spaceship.morePics.length>0?(
             Container(
                 margin: EdgeInsets.only(top: 20),
-                decoration: BoxDecoration(color: Colors.black),
+                decoration: BoxDecoration(color: Colors.black,),
                 height: 300,
                 child: ListView(scrollDirection: Axis.horizontal, children: 
                 this.spaceship.morePics.map((fileName){
                   return Container(
                       decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
                       margin: EdgeInsets.only(right: 20),
                       width: 250,
                       child: Image(
@@ -127,6 +127,24 @@ class MoreInfo extends StatelessWidget {
             )):Container()
           ],
         ),
+      ),
+    );
+  }
+}
+
+class MoreInfoBlockWArapper extends StatelessWidget {
+  final String title;
+  final String body;
+  MoreInfoBlockWArapper(this.title,this.body);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(bottom:20),
+      child: InfoBlock(
+        this.title,
+        this.body,
+        "light"
       ),
     );
   }

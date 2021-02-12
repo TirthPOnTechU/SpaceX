@@ -1,7 +1,7 @@
 import 'package:SpaceX/Screens/Rockets.dart';
 import 'package:SpaceX/Screens/Upcoming.dart';
 import 'package:flutter/material.dart';
-import 'Spaceship.dart';
+import 'Models/Spaceship.dart';
 import 'Screens/Launches.dart';
 
 void main() {
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
         "Starlink 2",
         "CCAES SLC 40",
         new DateTime.now(),
-        false,
+        true,
         'assets/crs.png',
         false,
         "Last launch of the original Falcon 9 v1.0 launch vehicle",

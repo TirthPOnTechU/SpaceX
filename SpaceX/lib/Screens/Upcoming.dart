@@ -2,7 +2,7 @@ import 'package:SpaceX/InfoBlock/InfoBlock.dart';
 import 'package:SpaceX/RocketsCard/CardContent.dart';
 import 'package:SpaceX/RocketsCard/CardWrapper.dart';
 import 'package:SpaceX/Screens/MoreInfo.dart';
-import 'package:SpaceX/Spaceship.dart';
+import 'package:SpaceX/Models/Spaceship.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -16,7 +16,7 @@ class Upcoming extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          RocketCard(this.upcomingLaunchShip),
+          RocketCard(this.upcomingLaunchShip,false),
           Container(
             decoration: BoxDecoration(),
             margin: EdgeInsets.only(left: 30, top: 40),

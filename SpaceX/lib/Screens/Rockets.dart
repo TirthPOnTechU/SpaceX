@@ -1,5 +1,5 @@
+import 'package:SpaceX/RocketsCard/CardWrapper.dart';
 import 'package:SpaceX/Screens/MoreInfo.dart';
-import 'package:SpaceX/RocketsInfoCard.dart';
 import 'package:flutter/material.dart';
 
 class Rockets extends StatelessWidget {
@@ -24,9 +24,9 @@ class Rockets extends StatelessWidget {
           },
           child: Container(
               margin: EdgeInsets.only(top: 10),
-              padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-              child: RocketsInfoCard(
+              child: RocketCard(
                 this.rockets[index],
+                true
               )
           )
         );
